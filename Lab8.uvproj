@@ -455,6 +455,11 @@
               <FileType>1</FileType>
               <FilePath>.\Sound.c</FilePath>
             </File>
+            <File>
+              <FileName>random.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\..\..\Desktop\lab10-starter-master-8392400a7d36907eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025b4a4e0e430\random.s</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -6,8 +6,9 @@ F (.\ADC.c)(0x5839FDF9)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_secti
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C87C24)
 I (ADC.h)(0x58325DC9)
 I (tm4c123gh6pm.h)(0x58325DCA)
-F (.\Lab8.c)(0x583BBFA4)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\lab8.o --omf_browse .\lab8.crf --depend .\lab8.d)
+F (.\Lab8.c)(0x583CE2A2)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\lab8.o --omf_browse .\lab8.crf --depend .\lab8.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C87C24)
+I (Random.h)(0x58325DCA)
 I (ST7735.h)(0x58325DCA)
 I (TExaS.h)(0x58325DCA)
 I (ADC.h)(0x58325DC9)
@@ -37,4 +38,5 @@ I (Sound.h)(0x58325DCA)
 I (DAC.h)(0x58325DC9)
 I (Timer0.h)(0x58325DCA)
 I (Timer1.h)(0x58325DCA)
+F (..\..\..\..\Desktop\lab10-starter-master-8392400a7d36907eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025b4a4e0e430\random.s)(0x5834BF8D)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\random.lst --xref -o .\random.o --depend .\random.d)
 F (.\texas.o)(0x58325DCA)()

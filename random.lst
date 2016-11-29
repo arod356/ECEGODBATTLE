@@ -79,7 +79,9 @@ ARM Macro Assembler    Page 2
               3C6EF35F 
 Command Line: --debug --xref --cpu=Cortex-M4 --apcs=interwork --depend=.\random
 .d -o.\random.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\AR
-M\Inc\Luminary --predefine="__EVAL SETA 1" --list=.\random.lst random.s
+M\Inc\Luminary --list=.\random.lst ..\..\..\..\Desktop\lab10-starter-master-839
+2400a7d36907eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc9
+40a1036025b4a4e0e430\random.s
 
 
 
@@ -90,7 +92,9 @@ DATA 00000000
 
 Symbol: DATA
    Definitions
-      At line 15 in file random.s
+      At line 15 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
       None
 Comment: DATA unused
@@ -98,11 +102,19 @@ M 00000000
 
 Symbol: M
    Definitions
-      At line 16 in file random.s
+      At line 16 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
-      At line 23 in file random.s
-      At line 31 in file random.s
-      At line 44 in file random.s
+      At line 23 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
+      At line 31 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
+      At line 44 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
 
 2 symbols
 
@@ -115,7 +127,9 @@ Relocatable symbols
 
 Symbol: .text
    Definitions
-      At line 18 in file random.s
+      At line 18 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
       None
 Comment: .text unused
@@ -123,25 +137,37 @@ Random 0000001C
 
 Symbol: Random
    Definitions
-      At line 44 in file random.s
+      At line 44 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
-      At line 20 in file random.s
+      At line 20 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
 Comment: Random used once
 Random32 0000000A
 
 Symbol: Random32
    Definitions
-      At line 31 in file random.s
+      At line 31 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
-      At line 21 in file random.s
+      At line 21 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
 Comment: Random32 used once
 Random_Init 00000000
 
 Symbol: Random_Init
    Definitions
-      At line 22 in file random.s
+      At line 22 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
    Uses
-      At line 19 in file random.s
+      At line 19 in file ..\..\..\..\Desktop\lab10-starter-master-8392400a7d369
+07eafc940a1036025b4a4e0e430\lab10-starter-master-8392400a7d36907eafc940a1036025
+b4a4e0e430\random.s
 Comment: Random_Init used once
 4 symbols
-339 symbols in table
+338 symbols in table
