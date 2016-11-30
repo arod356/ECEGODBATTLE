@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\Alex\Documents\EE319K Fall 2016\Git Submission\ECEGodBattle\Lab8.uvproj
-Project File Date:  11/26/2016
+Project File Date:  11/28/2016
 
 <h2>Output:</h2>
 Rebuild target 'Lab8'
@@ -13,9 +13,9 @@ assembling LCD.s...
 assembling Print.s...
 compiling ADC.c...
 compiling Lab8.c...
-Lab8.c(739): warning:  #223-D: function "ADC_In0" declared implicitly
+Lab8.c(1245): warning:  #223-D: function "ADC_In0" declared implicitly
                 reddiXpos = ADC_In0();
-Lab8.c(742): warning:  #223-D: function "ADC_In1" declared implicitly
+Lab8.c(1248): warning:  #223-D: function "ADC_In1" declared implicitly
                 valvanoXpos = ADC_In1();
 Lab8.c: 2 warnings, 0 errors
 compiling ST7735.c...
@@ -25,69 +25,20 @@ compiling Timer1.c...
 compiling Sound.c...
 assembling random.s...
 linking...
-Program Size: Code=9284 RO-data=185640 RW-data=200 ZI-data=1416  
+Program Size: Code=9968 RO-data=230900 RW-data=204 ZI-data=1436  
 ".\Lab8.axf" - 0 Error(s), 2 Warning(s).
 Load "C:\\Users\\Alex\\Documents\\EE319K Fall 2016\\Git Submission\\ECEGodBattle\\Lab8.axf" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
 Programming Done.
 Verify OK.
-</pre>
-</body>
-</html>
-#92: identifier-list parameters may only be used in a function definition
-        Sound_Play(SwagIntro, 51818);
-Lab8.c(493): error:  #147: declaration is incompatible with "void Sound_Play(const uint8_t *, uint32_t)" (declared at line 10 of "Sound.h")
-        Sound_Play(SwagIntro, 51818);
-Lab8.c(494): error:  #79: expected a type specifier
-        ST7735_SetRotation(3);
-Lab8.c(494): error:  #260-D: explicit type is missing ("int" assumed)
-        ST7735_SetRotation(3);
-Lab8.c(494): error:  #147: declaration is incompatible with "void ST7735_SetRotation(uint8_t)" (declared at line 262 of "ST7735.h")
-        ST7735_SetRotation(3);
-Lab8.c(495): error:  #79: expected a type specifier
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #79: expected a type specifier
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #757: variable "Reddi" is not a type name
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #79: expected a type specifier
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #79: expected a type specifier
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #260-D: explicit type is missing ("int" assumed)
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(495): error:  #147: declaration is incompatible with "void ST7735_DrawBitmap(int16_t, int16_t, const uint16_t *, int16_t, int16_t)" (declared at line 186 of "ST7735.h")
-        ST7735_DrawBitmap(80,128, Reddi, 29,25);
-Lab8.c(496): error:  #79: expected a type specifier
-        ST7735_SetRotation(0);
-Lab8.c(496): error:  #260-D: explicit type is missing ("int" assumed)
-        ST7735_SetRotation(0);
-Lab8.c(497): error:  #77-D: this declaration has no storage class or type specifier
-        valvanoHealth=50;
-Lab8.c(497): error:  #148: variable "valvanoHealth" has already been initialized
-        valvanoHealth=50;
-Lab8.c(498): error:  #77-D: this declaration has no storage class or type specifier
-        reddiHealth = 100000;
-Lab8.c(498): error:  #148: variable "reddiHealth" has already been initialized
-        reddiHealth = 100000;
-Lab8.c(499): error:  #77-D: this declaration has no storage class or type specifier
-    win=1;
-Lab8.c(499): error:  #148: variable "win" has already been initialized
-    win=1;
-Lab8.c(503): error:  #169: expected a declaration
-        while((GPIO_PORTE_DATA_R&0x02)==0){};
-Lab8.c(505): error:  #79: expected a type specifier
-        ST7735_FillScreen(0);
-Lab8.c(505): error:  #260-D: explicit type is missing ("int" assumed)
-        ST7735_FillScreen(0);
-Lab8.c(505): error:  #147: declaration is incompatible with "void ST7735_FillScreen(uint16_t)" (declared at line 136 of "ST7735.h")
-        ST7735_FillScreen(0);
-Lab8.c: 1 warning, 30 errors
-compiling ST7735.c...
-compiling dac.c...
-compiling Timer0.c...
-compiling Timer1.c...
-compiling Sound.c...
-".\Lab8.axf" - 30 Error(s), 1 Warning(s).
-Target not created
+sh Download failed  -  "Cortex-M4"
+Load "C:\\Users\\Alex\\Documents\\EE319K Fall 2016\\Git Submission\\ECEGodBattle\\Lab8.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Connection failed!, error code=&d
+Error: Flash Download failed  -  Target DLL has been cancelled
+Load "C:\\Users\\Alex\\Documents\\EE319K Fall 2016\\Git Submission\\ECEGodBattle\\Lab8.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
