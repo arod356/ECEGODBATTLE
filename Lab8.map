@@ -27,8 +27,10 @@ Section Cross References
     lab8.o(i.SysTick_Handler) refers to adc.o(i.ADC_In1) for ADC_In1
     lab8.o(i.SysTick_Handler) refers to lab8.o(.data) for reddiXpos
     lab8.o(i.SysTick_Handler) refers to lab8.o(.bss) for paper
+    lab8.o(i.collision$) refers to sound.o(i.Sound_Play) for Sound_Play
     lab8.o(i.collision$) refers to lab8.o(.bss) for money
     lab8.o(i.collision$) refers to lab8.o(.data) for reddiXpos
+    lab8.o(i.collision$) refers to lab8.o(.constdata) for MoneySound
     lab8.o(i.collisions1) refers to st7735.o(i.ST7735_SetRotation) for ST7735_SetRotation
     lab8.o(i.collisions1) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
     lab8.o(i.collisions1) refers to sound.o(i.Sound_Play) for Sound_Play
@@ -75,8 +77,8 @@ Section Cross References
     lab8.o(i.main) refers to st7735.o(i.ST7735_SetRotation) for ST7735_SetRotation
     lab8.o(i.main) refers to st7735.o(i.ST7735_DrawString) for ST7735_DrawString
     lab8.o(i.main) refers to sound.o(i.Sound_Play) for Sound_Play
-    lab8.o(i.main) refers to lab8.o(i.Delay100ms) for Delay100ms
     lab8.o(i.main) refers to lab8.o(i.Countdown) for Countdown
+    lab8.o(i.main) refers to lab8.o(i.Delay100ms) for Delay100ms
     lab8.o(i.main) refers to lab8.o(i.missileinit) for missileinit
     lab8.o(i.main) refers to lab8.o(i.moneyinit) for moneyinit
     lab8.o(i.main) refers to timer1.o(i.Timer1_Init) for Timer1_Init
@@ -498,32 +500,32 @@ Image Symbol Table
     i.Timer1A_Handler                        0x000016fc   Section        0  timer1.o(i.Timer1A_Handler)
     i.Timer1_Init                            0x00001714   Section        0  timer1.o(i.Timer1_Init)
     i.collision$                             0x00001774   Section        0  lab8.o(i.collision$)
-    i.collisions1                            0x000017e0   Section        0  lab8.o(i.collisions1)
-    i.collisions2                            0x000019d0   Section        0  lab8.o(i.collisions2)
-    i.commandList                            0x00001bb8   Section        0  st7735.o(i.commandList)
-    commandList                              0x00001bb9   Thumb Code    86  st7735.o(i.commandList)
-    i.commonInit                             0x00001c10   Section        0  st7735.o(i.commonInit)
-    commonInit                               0x00001c11   Thumb Code   340  st7735.o(i.commonInit)
-    i.drawmissile                            0x00001d94   Section        0  lab8.o(i.drawmissile)
-    i.drawmoney                              0x00001e7c   Section        0  lab8.o(i.drawmoney)
-    i.losesequence                           0x00001ecc   Section        0  lab8.o(i.losesequence)
-    i.main                                   0x00001f5c   Section        0  lab8.o(i.main)
-    i.missileinit                            0x00002528   Section        0  lab8.o(i.missileinit)
-    i.moneyinit                              0x00002574   Section        0  lab8.o(i.moneyinit)
-    i.poll                                   0x00002590   Section        0  lab8.o(i.poll)
-    i.pushColor                              0x00002668   Section        0  st7735.o(i.pushColor)
-    pushColor                                0x00002669   Thumb Code    18  st7735.o(i.pushColor)
-    i.setAddrWindow                          0x0000267c   Section        0  st7735.o(i.setAddrWindow)
-    setAddrWindow                            0x0000267d   Thumb Code   106  st7735.o(i.setAddrWindow)
-    .constdata                               0x000026f0   Section    228609  lab8.o(.constdata)
-    .constdata                               0x0003a3f1   Section     2018  st7735.o(.constdata)
-    Font                                     0x0003a3f1   Data        1275  st7735.o(.constdata)
-    Bcmd                                     0x0003a8ec   Data         103  st7735.o(.constdata)
-    Rcmd1                                    0x0003a953   Data          59  st7735.o(.constdata)
-    Rcmd2green                               0x0003a98e   Data          13  st7735.o(.constdata)
-    Rcmd2red                                 0x0003a99b   Data          13  st7735.o(.constdata)
-    Rcmd3                                    0x0003a9a8   Data          43  st7735.o(.constdata)
-    .constdata                               0x0003abd3   Section      240  texas.o(.constdata)
+    i.collisions1                            0x000017f0   Section        0  lab8.o(i.collisions1)
+    i.collisions2                            0x000019e0   Section        0  lab8.o(i.collisions2)
+    i.commandList                            0x00001bc8   Section        0  st7735.o(i.commandList)
+    commandList                              0x00001bc9   Thumb Code    86  st7735.o(i.commandList)
+    i.commonInit                             0x00001c20   Section        0  st7735.o(i.commonInit)
+    commonInit                               0x00001c21   Thumb Code   340  st7735.o(i.commonInit)
+    i.drawmissile                            0x00001da4   Section        0  lab8.o(i.drawmissile)
+    i.drawmoney                              0x00001e8c   Section        0  lab8.o(i.drawmoney)
+    i.losesequence                           0x00001edc   Section        0  lab8.o(i.losesequence)
+    i.main                                   0x00001f6c   Section        0  lab8.o(i.main)
+    i.missileinit                            0x00002524   Section        0  lab8.o(i.missileinit)
+    i.moneyinit                              0x00002570   Section        0  lab8.o(i.moneyinit)
+    i.poll                                   0x0000258c   Section        0  lab8.o(i.poll)
+    i.pushColor                              0x00002664   Section        0  st7735.o(i.pushColor)
+    pushColor                                0x00002665   Thumb Code    18  st7735.o(i.pushColor)
+    i.setAddrWindow                          0x00002678   Section        0  st7735.o(i.setAddrWindow)
+    setAddrWindow                            0x00002679   Thumb Code   106  st7735.o(i.setAddrWindow)
+    .constdata                               0x000026ec   Section    248265  lab8.o(.constdata)
+    .constdata                               0x0003f0b5   Section     2018  st7735.o(.constdata)
+    Font                                     0x0003f0b5   Data        1275  st7735.o(.constdata)
+    Bcmd                                     0x0003f5b0   Data         103  st7735.o(.constdata)
+    Rcmd1                                    0x0003f617   Data          59  st7735.o(.constdata)
+    Rcmd2green                               0x0003f652   Data          13  st7735.o(.constdata)
+    Rcmd2red                                 0x0003f65f   Data          13  st7735.o(.constdata)
+    Rcmd3                                    0x0003f66c   Data          43  st7735.o(.constdata)
+    .constdata                               0x0003f897   Section      240  texas.o(.constdata)
     .data                                    0x20000000   Section       12  adc.o(.data)
     .data                                    0x2000000c   Section       72  lab8.o(.data)
     .data                                    0x20000054   Section       44  st7735.o(.data)
@@ -820,38 +822,39 @@ Image Symbol Table
     Timer0_Init                              0x0000169d   Thumb Code    76  timer0.o(i.Timer0_Init)
     Timer1A_Handler                          0x000016fd   Thumb Code    16  timer1.o(i.Timer1A_Handler)
     Timer1_Init                              0x00001715   Thumb Code    76  timer1.o(i.Timer1_Init)
-    collision$                               0x00001775   Thumb Code    94  lab8.o(i.collision$)
-    collisions1                              0x000017e1   Thumb Code   456  lab8.o(i.collisions1)
-    collisions2                              0x000019d1   Thumb Code   446  lab8.o(i.collisions2)
-    drawmissile                              0x00001d95   Thumb Code   218  lab8.o(i.drawmissile)
-    drawmoney                                0x00001e7d   Thumb Code    70  lab8.o(i.drawmoney)
-    losesequence                             0x00001ecd   Thumb Code    84  lab8.o(i.losesequence)
-    main                                     0x00001f5d   Thumb Code  1420  lab8.o(i.main)
-    missileinit                              0x00002529   Thumb Code    68  lab8.o(i.missileinit)
-    moneyinit                                0x00002575   Thumb Code    22  lab8.o(i.moneyinit)
-    poll                                     0x00002591   Thumb Code   178  lab8.o(i.poll)
-    Logo                                     0x000026f0   Data       12800  lab8.o(.constdata)
-    Dollarsign                               0x000058f0   Data         306  lab8.o(.constdata)
-    Valvano                                  0x00005a22   Data        1380  lab8.o(.constdata)
-    Reddi                                    0x00005f86   Data        2262  lab8.o(.constdata)
-    Patt                                     0x0000685c   Data        1450  lab8.o(.constdata)
-    Paper                                    0x00006e06   Data         336  lab8.o(.constdata)
-    Death                                    0x00006f56   Data        1520  lab8.o(.constdata)
-    MoneySound                               0x00007546   Data       19343  lab8.o(.constdata)
-    shoot                                    0x0000c0d5   Data        4080  lab8.o(.constdata)
-    explosion                                0x0000d0c5   Data        8731  lab8.o(.constdata)
-    LoseEnd                                  0x0000f2e0   Data       70560  lab8.o(.constdata)
-    victory                                  0x00020680   Data       54023  lab8.o(.constdata)
-    SwagIntro                                0x0002d987   Data       51818  lab8.o(.constdata)
-    dBfs                                     0x0003a9d3   Data         512  st7735.o(.constdata)
-    InputPortMsg                             0x0003abd3   Data          40  texas.o(.constdata)
-    OutputPortMsg                            0x0003abfb   Data          40  texas.o(.constdata)
-    BlankMsg                                 0x0003ac23   Data          40  texas.o(.constdata)
-    InitializedMsg                           0x0003ac4b   Data          40  texas.o(.constdata)
-    IntroMsg                                 0x0003ac73   Data          40  texas.o(.constdata)
-    DoneMsg                                  0x0003ac9b   Data          40  texas.o(.constdata)
-    Region$$Table$$Base                      0x0003acc4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0003ace4   Number         0  anon$$obj.o(Region$$Table)
+    collision$                               0x00001775   Thumb Code   106  lab8.o(i.collision$)
+    collisions1                              0x000017f1   Thumb Code   456  lab8.o(i.collisions1)
+    collisions2                              0x000019e1   Thumb Code   446  lab8.o(i.collisions2)
+    drawmissile                              0x00001da5   Thumb Code   218  lab8.o(i.drawmissile)
+    drawmoney                                0x00001e8d   Thumb Code    70  lab8.o(i.drawmoney)
+    losesequence                             0x00001edd   Thumb Code    84  lab8.o(i.losesequence)
+    main                                     0x00001f6d   Thumb Code  1404  lab8.o(i.main)
+    missileinit                              0x00002525   Thumb Code    68  lab8.o(i.missileinit)
+    moneyinit                                0x00002571   Thumb Code    22  lab8.o(i.moneyinit)
+    poll                                     0x0000258d   Thumb Code   178  lab8.o(i.poll)
+    Logo                                     0x000026ec   Data       12800  lab8.o(.constdata)
+    Dollarsign                               0x000058ec   Data         306  lab8.o(.constdata)
+    Valvano                                  0x00005a1e   Data        1380  lab8.o(.constdata)
+    Reddi                                    0x00005f82   Data        2262  lab8.o(.constdata)
+    Patt                                     0x00006858   Data        1450  lab8.o(.constdata)
+    Paper                                    0x00006e02   Data         336  lab8.o(.constdata)
+    Death                                    0x00006f52   Data        1520  lab8.o(.constdata)
+    Reddiwin                                 0x00007542   Data       19656  lab8.o(.constdata)
+    MoneySound                               0x0000c20a   Data       19343  lab8.o(.constdata)
+    shoot                                    0x00010d99   Data        4080  lab8.o(.constdata)
+    explosion                                0x00011d89   Data        8731  lab8.o(.constdata)
+    LoseEnd                                  0x00013fa4   Data       70560  lab8.o(.constdata)
+    victory                                  0x00025344   Data       54023  lab8.o(.constdata)
+    SwagIntro                                0x0003264b   Data       51818  lab8.o(.constdata)
+    dBfs                                     0x0003f697   Data         512  st7735.o(.constdata)
+    InputPortMsg                             0x0003f897   Data          40  texas.o(.constdata)
+    OutputPortMsg                            0x0003f8bf   Data          40  texas.o(.constdata)
+    BlankMsg                                 0x0003f8e7   Data          40  texas.o(.constdata)
+    InitializedMsg                           0x0003f90f   Data          40  texas.o(.constdata)
+    IntroMsg                                 0x0003f937   Data          40  texas.o(.constdata)
+    DoneMsg                                  0x0003f95f   Data          40  texas.o(.constdata)
+    Region$$Table$$Base                      0x0003f988   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0003f9a8   Number         0  anon$$obj.o(Region$$Table)
     data0                                    0x20000000   Data           4  adc.o(.data)
     data1                                    0x20000004   Data           4  adc.o(.data)
     datajunk                                 0x20000008   Data           4  adc.o(.data)
@@ -914,9 +917,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x0003adb0, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x0003fa74, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x0003ace4, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0003f9a8, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1010,27 +1013,27 @@ Memory Map of the image
     0x0000169c   0x00000060   Code   RO          461    i.Timer0_Init       timer0.o
     0x000016fc   0x00000018   Code   RO          491    i.Timer1A_Handler   timer1.o
     0x00001714   0x00000060   Code   RO          492    i.Timer1_Init       timer1.o
-    0x00001774   0x0000006c   Code   RO           57    i.collision$        lab8.o
-    0x000017e0   0x000001f0   Code   RO           58    i.collisions1       lab8.o
-    0x000019d0   0x000001e8   Code   RO           59    i.collisions2       lab8.o
-    0x00001bb8   0x00000056   Code   RO          198    i.commandList       st7735.o
-    0x00001c0e   0x00000002   PAD
-    0x00001c10   0x00000184   Code   RO          199    i.commonInit        st7735.o
-    0x00001d94   0x000000e8   Code   RO           60    i.drawmissile       lab8.o
-    0x00001e7c   0x00000050   Code   RO           61    i.drawmoney         lab8.o
-    0x00001ecc   0x00000090   Code   RO           62    i.losesequence      lab8.o
-    0x00001f5c   0x000005cc   Code   RO           63    i.main              lab8.o
-    0x00002528   0x0000004c   Code   RO           64    i.missileinit       lab8.o
-    0x00002574   0x0000001c   Code   RO           65    i.moneyinit         lab8.o
-    0x00002590   0x000000d8   Code   RO           66    i.poll              lab8.o
-    0x00002668   0x00000012   Code   RO          204    i.pushColor         st7735.o
-    0x0000267a   0x00000002   PAD
-    0x0000267c   0x00000074   Code   RO          205    i.setAddrWindow     st7735.o
-    0x000026f0   0x00037d01   Data   RO           68    .constdata          lab8.o
-    0x0003a3f1   0x000007e2   Data   RO          207    .constdata          st7735.o
-    0x0003abd3   0x000000f0   Data   RO          545    .constdata          texas.o
-    0x0003acc3   0x00000001   PAD
-    0x0003acc4   0x00000020   Data   RO          716    Region$$Table       anon$$obj.o
+    0x00001774   0x0000007c   Code   RO           57    i.collision$        lab8.o
+    0x000017f0   0x000001f0   Code   RO           58    i.collisions1       lab8.o
+    0x000019e0   0x000001e8   Code   RO           59    i.collisions2       lab8.o
+    0x00001bc8   0x00000056   Code   RO          198    i.commandList       st7735.o
+    0x00001c1e   0x00000002   PAD
+    0x00001c20   0x00000184   Code   RO          199    i.commonInit        st7735.o
+    0x00001da4   0x000000e8   Code   RO           60    i.drawmissile       lab8.o
+    0x00001e8c   0x00000050   Code   RO           61    i.drawmoney         lab8.o
+    0x00001edc   0x00000090   Code   RO           62    i.losesequence      lab8.o
+    0x00001f6c   0x000005b8   Code   RO           63    i.main              lab8.o
+    0x00002524   0x0000004c   Code   RO           64    i.missileinit       lab8.o
+    0x00002570   0x0000001c   Code   RO           65    i.moneyinit         lab8.o
+    0x0000258c   0x000000d8   Code   RO           66    i.poll              lab8.o
+    0x00002664   0x00000012   Code   RO          204    i.pushColor         st7735.o
+    0x00002676   0x00000002   PAD
+    0x00002678   0x00000074   Code   RO          205    i.setAddrWindow     st7735.o
+    0x000026ec   0x0003c9c9   Data   RO           68    .constdata          lab8.o
+    0x0003f0b5   0x000007e2   Data   RO          207    .constdata          st7735.o
+    0x0003f897   0x000000f0   Data   RO          545    .constdata          texas.o
+    0x0003f987   0x00000001   PAD
+    0x0003f988   0x00000020   Data   RO          716    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x000000cc, Max: 0xffffffff, ABSOLUTE)
@@ -1069,7 +1072,7 @@ Image component sizes
 
        356         56          0         12          0       5998   adc.o
        104         18          0          1          0        953   dac.o
-      4444        592     228609         72        260      10801   lab8.o
+      4440        588     248265         72        260      10866   lab8.o
         80         12          0          0          0        216   lcd.o
        268          0          0          0          0        280   print.o
         64         14          0          4          0        504   random.o
@@ -1081,7 +1084,7 @@ Image component sizes
        120         28          0          4          0       1348   timer1.o
 
     ----------------------------------------------------------------------
-      9696       1796     230900        204       1340      51934   Object Totals
+      9692       1792     250556        204       1340      51999   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          1          3          0          0   (incl. Padding)
 
@@ -1130,15 +1133,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9968       1812     230900        204       1436      49910   Grand Totals
-      9968       1812     230900        204       1436      49910   ELF Image Totals
-      9968       1812     230900        204          0          0   ROM Totals
+      9964       1808     250556        204       1436      49975   Grand Totals
+      9964       1808     250556        204       1436      49975   ELF Image Totals
+      9964       1808     250556        204          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               240868 ( 235.22kB)
+    Total RO  Size (Code + RO Data)               260520 ( 254.41kB)
     Total RW  Size (RW Data + ZI Data)              1640 (   1.60kB)
-    Total ROM Size (Code + RO Data + RW Data)     241072 ( 235.42kB)
+    Total ROM Size (Code + RO Data + RW Data)     260724 ( 254.61kB)
 
 ==============================================================================
 

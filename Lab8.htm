@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Lab8.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Lab8.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Nov 29 18:43:53 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Nov 29 20:43:02 2016
 <BR><P>
 <H3>Maximum Stack Usage =        168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -14,7 +14,7 @@ Functions with no stack information
 </H3><UL>
  <LI><a href="#[81]">Reset_Handler</a>
  <LI><a href="#[ea]">DisableInterrupts</a>
- <LI><a href="#[c4]">EnableInterrupts</a>
+ <LI><a href="#[c5]">EnableInterrupts</a>
  <LI><a href="#[eb]">StartCritical</a>
  <LI><a href="#[ec]">EndCritical</a>
  <LI><a href="#[ed]">WaitForInterrupt</a>
@@ -23,8 +23,8 @@ Functions with no stack information
  <LI><a href="#[93]">writedata</a>
  <LI><a href="#[94]">LCD_OutDec</a>
  <LI><a href="#[96]">LCD_OutFix</a>
- <LI><a href="#[c3]">Random_Init</a>
- <LI><a href="#[bc]">Random32</a>
+ <LI><a href="#[c4]">Random_Init</a>
+ <LI><a href="#[bd]">Random32</a>
  <LI><a href="#[ee]">Random</a>
 </UL>
 </UL>
@@ -706,7 +706,7 @@ Global Symbols
 
 <P><STRONG><a name="[ea]"></a>DisableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[c4]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
+<P><STRONG><a name="[c5]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -759,14 +759,14 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_OutChar
 </UL>
 
-<P><STRONG><a name="[c3]"></a>Random_Init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, random.o(.text))
+<P><STRONG><a name="[c4]"></a>Random_Init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, random.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>Random32</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, random.o(.text))
+<P><STRONG><a name="[bd]"></a>Random32</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, random.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;poll
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
 </UL>
 
 <P><STRONG><a name="[ee]"></a>Random</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, random.o(.text), UNUSED)
@@ -911,16 +911,16 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Out
 </UL>
 
-<P><STRONG><a name="[bb]"></a>Delay100ms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lab8.o(i.Delay100ms))
+<P><STRONG><a name="[bc]"></a>Delay100ms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lab8.o(i.Delay100ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
 </UL>
 
-<P><STRONG><a name="[be]"></a>Delay1ms</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, st7735.o(i.Delay1ms))
+<P><STRONG><a name="[bf]"></a>Delay1ms</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, st7735.o(i.Delay1ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Delay1ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commonInit
@@ -953,10 +953,10 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
 </UL>
 
 <P><STRONG><a name="[a3]"></a>ST7735_DrawCharS</STRONG> (Thumb, 232 bytes, Stack size 48 bytes, st7735.o(i.ST7735_DrawCharS))
@@ -988,7 +988,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawCharS
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_OutChar
 </UL>
 
@@ -1002,8 +1002,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_FillScreen
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawCharS
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
 </UL>
 
 <P><STRONG><a name="[a6]"></a>ST7735_FillScreen</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, st7735.o(i.ST7735_FillScreen))
@@ -1015,7 +1015,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Output_Init
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
 </UL>
 
 <P><STRONG><a name="[a5]"></a>ST7735_InitR</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, st7735.o(i.ST7735_InitR))
@@ -1066,11 +1066,11 @@ Global Symbols
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writecommand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Countdown
 </UL>
 
@@ -1093,9 +1093,10 @@ Global Symbols
 <P><STRONG><a name="[ba]"></a>Sound_Play</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, sound.o(i.Sound_Play))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;poll
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collision$
 </UL>
 
 <P><STRONG><a name="[c]"></a>SysTick_Handler</STRONG> (Thumb, 608 bytes, Stack size 8 bytes, lab8.o(i.SysTick_Handler))
@@ -1106,7 +1107,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[c2]"></a>SysTick_Init</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, lab8.o(i.SysTick_Init))
+<P><STRONG><a name="[c3]"></a>SysTick_Init</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, lab8.o(i.SysTick_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1124,41 +1125,45 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[c7]"></a>Timer1_Init</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, timer1.o(i.Timer1_Init))
+<P><STRONG><a name="[c8]"></a>Timer1_Init</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, timer1.o(i.Timer1_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c8]"></a>collision$</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, lab8.o(i.collision$))
-<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[b9]"></a>collision$</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, lab8.o(i.collision$))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = collision$
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Play
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b9]"></a>collisions1</STRONG> (Thumb, 456 bytes, Stack size 16 bytes, lab8.o(i.collisions1))
+<P><STRONG><a name="[bb]"></a>collisions1</STRONG> (Thumb, 456 bytes, Stack size 16 bytes, lab8.o(i.collisions1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = collisions1 &rArr; ST7735_DrawBitmap &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Play
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_SetRotation
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawBitmap
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bd]"></a>collisions2</STRONG> (Thumb, 446 bytes, Stack size 16 bytes, lab8.o(i.collisions2))
+<P><STRONG><a name="[be]"></a>collisions2</STRONG> (Thumb, 446 bytes, Stack size 16 bytes, lab8.o(i.collisions2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = collisions2 &rArr; ST7735_DrawBitmap &rArr; setAddrWindow
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Play
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_SetRotation
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawBitmap
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bf]"></a>drawmissile</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, lab8.o(i.drawmissile))
+<P><STRONG><a name="[c0]"></a>drawmissile</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, lab8.o(i.drawmissile))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = drawmissile &rArr; ST7735_DrawBitmap &rArr; setAddrWindow
 </UL>
@@ -1169,7 +1174,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c0]"></a>drawmoney</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, lab8.o(i.drawmoney))
+<P><STRONG><a name="[c1]"></a>drawmoney</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, lab8.o(i.drawmoney))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
 <LI>Call Chain = drawmoney &rArr; ST7735_DrawBitmap &rArr; setAddrWindow
 </UL>
@@ -1180,7 +1185,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c1]"></a>losesequence</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, lab8.o(i.losesequence))
+<P><STRONG><a name="[c2]"></a>losesequence</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, lab8.o(i.losesequence))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = losesequence &rArr; ST7735_DrawString &rArr; ST7735_DrawCharS &rArr; ST7735_FillRect &rArr; setAddrWindow
 </UL>
@@ -1188,16 +1193,16 @@ Global Symbols
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_SetRotation
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_FillScreen
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawString
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8c]"></a>main</STRONG> (Thumb, 1420 bytes, Stack size 8 bytes, lab8.o(i.main))
+<P><STRONG><a name="[8c]"></a>main</STRONG> (Thumb, 1404 bytes, Stack size 8 bytes, lab8.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = main &rArr; ST7735_OutString &rArr; ST7735_OutChar &rArr; ST7735_DrawString &rArr; ST7735_DrawCharS &rArr; ST7735_FillRect &rArr; setAddrWindow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Init
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Init
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Play
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Init
@@ -1207,32 +1212,32 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_FillRect
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawString
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_DrawBitmap
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random_Init
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random_Init
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Output_Init
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;moneyinit
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;missileinit
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collision$
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;moneyinit
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;missileinit
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;losesequence
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmoney
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawmissile
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions2
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collisions1
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;collision$
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Port_Init
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Countdown
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_OutString
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_OutDec
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[c5]"></a>missileinit</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, lab8.o(i.missileinit))
+<P><STRONG><a name="[c6]"></a>missileinit</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, lab8.o(i.missileinit))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c6]"></a>moneyinit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lab8.o(i.moneyinit))
+<P><STRONG><a name="[c7]"></a>moneyinit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lab8.o(i.moneyinit))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1241,7 +1246,7 @@ Global Symbols
 <LI>Call Chain = poll
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sound_Play
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Random32
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lab8.o(i.main)
 </UL><P>
@@ -1252,7 +1257,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = commandList &rArr; Delay1ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay1ms
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay1ms
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writedata
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writecommand
 </UL>
@@ -1264,7 +1269,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = commonInit &rArr; commandList &rArr; Delay1ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay1ms
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay1ms
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;commandList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ST7735_InitR
