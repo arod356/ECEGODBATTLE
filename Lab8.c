@@ -1460,35 +1460,28 @@ void missileinit(void){
 
 void poll(void){
 	if ((loop1&0x01) ==1){
-	
 		if ((GPIO_PORTE_DATA_R&0x04)==0x04){
 			reddifire=1;
-	Sound_Play(shoot, 4080);
+			Sound_Play(shoot, 4080);
 		}
 	}
 	if (pattflag==1){	
 		if ((GPIO_PORTE_DATA_R&0x08)==0x08){
 			enemyfire=1;
-		Sound_Play(shoot, 4080);
-		
+			Sound_Play(shoot, 4080);
 		}
 	}
 	else {
 		if ((loop1&0x01 )==0){
-	
 			if ((GPIO_PORTE_DATA_R&0x08)==0x08){
 				enemyfire=1;
-				
-			Sound_Play(shoot, 4080);
+				Sound_Play(shoot, 4080);
 			}
 		}
-	}  
-
-	
-	loop++;
-	
-	if (loop== ((Random32()>>25)+30)){
-		moneyflag=1;
+	} 
+	loop++;																	// occurs in the timer handler, at 4 Hz
+	if (loop== ((Random32()>>25)+30)){			// random money spawn
+		moneyflag=1;													// spawn money
 	}
 	
 	loop1++;	
@@ -1532,23 +1525,21 @@ void drawmoney(void){
 void collisions1 (void){
 	for (int i=0; i<bulmax; i++){
 		if (paper[i].alive==1){
-			
 			if (paper[i].direction ==0){
 				if ((((valvanoXpos-15)>= (paper[i].xpos ))&& (paper[i].xpos>= (valvanoXpos-38)))||(((valvanoXpos-15)>= (paper[i].xpos-14) )&& ((paper[i].xpos-14)>= (valvanoXpos-38)))){
 					if (paper[i].ypos >= 86){
 						valvanoHealth--;
-						if (valvanoHealth <= 0){
-//							DisableInterrupts();
-							TIMER1_CTL_R = 0x00000000;  
-							NVIC_ST_CTRL_R = 0;
+						if (valvanoHealth <= 0){				// if boss health depleted
+							TIMER1_CTL_R = 0x00000000;     //deactivate intterupts from shooting
+							NVIC_ST_CTRL_R = 0;							// deactivate screen refresh interrrups
 							valvanoHealth=0;
 							ST7735_SetRotation(0);
-							ST7735_DrawBitmap(8, valvanoXpos,Death,19,40);
+							ST7735_DrawBitmap(8, valvanoXpos,Death,19,40);		//explosion pic
 							Sound_Play(explosion, 8731);
 							NVIC_ST_CTRL_R = 0;
 							Delay100ms(20);
-							NVIC_ST_CTRL_R = 0x07;
-								TIMER1_CTL_R = 0x00000001;  
+							NVIC_ST_CTRL_R = 0x07;					// reactivate interrrupts
+							TIMER1_CTL_R = 0x00000001;  		
 						}
 					}
 				}
@@ -1685,12 +1676,14 @@ int main(void){
 
 	//------------In Game------------
 	while((GPIO_PORTE_DATA_R&0x02)==0){};
-	
+	ST7735_SetRotation(3);
 	ST7735_FillScreen(0);
-		//valvano will trashtalk reddi: We know that I'm the best 319k 
-		// print image of valvano
-		
-//	Delay100ms(40);
+	ST7735_DrawString(1,2, "Your tests may", 0xFFFF);									//valvano will trashtalk reddi: We know that I'm the best 319k 
+	ST7735_DrawString(1,3, "be hard, but I'm", 0xFFFF);		
+	ST7735_DrawString(1,5, "THE GOD OF 319K!", 0xFFFF);
+	ST7735_SetRotation(0);
+	ST7735_DrawBitmap(80,80,Valvano,30,23);	// print image of valvano
+	Delay100ms(70);
 		
 		
 	ST7735_FillScreen(0);	
@@ -1755,8 +1748,8 @@ int main(void){
 		ST7735_DrawString(4,2, "Victory is yours!!", 0xFFFF);
 		ST7735_DrawString(3,4, "Ready for Dr.Patt?", 0xFFFF);
 		ST7735_SetRotation(0);
-		ST7735_DrawBitmap(100,100, Patt, 29,25);
-//    Delay100ms(40);
+		ST7735_DrawBitmap(80,100, Patt, 29,25);
+    Delay100ms(40);
 	}	
 	
 		
@@ -1781,10 +1774,16 @@ if (win==1){
 	while((GPIO_PORTE_DATA_R&0x02)==0){};
 	
 	ST7735_FillScreen(0);
-		//patt will trashtalk reddi: You'll never publish anything better than my branch prediction! I'm the one true EE GOD !!!
-		// print image of patt
-		
-	//Delay100ms(40);
+	ST7735_SetRotation(3);
+	ST7735_FillScreen(0);
+	ST7735_DrawString(1,2, "You'll never", 0xFFFF);									//patt will trashtalk reddi
+	ST7735_DrawString(1,3, "revolutionize EE", 0xFFFF);	
+	ST7735_DrawString(1,4, "like my branch", 0xFFFF);	
+	ST7735_DrawString(1,5, "prediction method", 0xFFFF);
+	ST7735_DrawString(1,7, "I'm the GOD OF EE", 0xFFFF);
+	ST7735_SetRotation(0);
+	ST7735_DrawBitmap(80,80, Patt, 29,25);
+	Delay100ms(70);
 		
 		
 	ST7735_FillScreen(0);
@@ -1860,7 +1859,7 @@ if (win==1){
 }
  }
 }		
-	void SysTick_Handler(void){
+void SysTick_Handler(void){
 		reddiXposinit= reddiXpos;
 		reddiXpos = ADC_In0();
 		reddiXpos = (reddiXpos)/30;
@@ -1904,19 +1903,14 @@ if (win==1){
 			}
 		}
 		
-		for (int i=0; i<bulmax; i++){
-			
+		for (int i=0; i<bulmax; i++){													//occurs in the systic handler triggered at 30 Hz
 			if (paper[i].alive ==1){
-				
-				if ((paper[i].ypos < 1)||(paper[i].ypos>129)){
+				if ((paper[i].ypos < 1)||(paper[i].ypos>129)){			//end bullet existence
 					paper[i].alive=0;
 				}
 				else{
-				
-				
 					if (paper[i].direction ==0){
-						paper[i].yposinit=paper[i].ypos;
-						
+						paper[i].yposinit=paper[i].ypos;							// set previous state y position for drawing black box over trail
 						paper[i].ypos +=3;
 					}
 					else {
